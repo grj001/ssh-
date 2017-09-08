@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 页面跳转 -->
+	<package name="registIndex" namespace="/user" extends="struts-default">
+
+		<action name="user_registIndex" class="userAction" method="user_registIndex">
+			<result name="success">/WEB-INF/view/regist.jsp</result>
+		</action>
+
+		<action name="user_loginIndex" class="userAction" method="user_loginIndex">
+			<result name="success">/WEB-INF/view/login.jsp</result>
+		</action>
+
+		<!-- 数据传送 -->
+		<action name="user_regist" class="userAction" method="user_regist">
+			<result name="success">/WEB-INF/view/regist.jsp</result>
+		</action>
+
+		<action name="user_login" class="userAction" method="user_login">
+			<result name="success">/WEB-INF/view/login.jsp</result>
+		</action>
+
+	</package>
+</struts>
